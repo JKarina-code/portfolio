@@ -1,5 +1,8 @@
 export const navLinks = [
-  { id: "home", title: "home" },
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -19,7 +22,9 @@ export const navLinks = [
   },
 ];
 
+export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 export const info = {
   firstName: "Jymma",
   lastName: "Mogollon",
+  gradient: `-webkit-linear-gradient(135deg, ${colors})`,
 };
