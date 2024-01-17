@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, info } from "../constants";
-
-export const Navbar = () => {
+import { menu, close } from "../assets";
+const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -57,14 +57,14 @@ export const Navbar = () => {
                 setActive(nav.title);
               }}
             >
-              <NavLink to={`${nav.id}`}>{nav.title}</NavLink>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src=""
+            src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle(!toggle)}
@@ -87,7 +87,7 @@ export const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <NavLink to={`#${nav.id}`}>{nav.title}</NavLink>
+                  <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
             </ul>
@@ -97,3 +97,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;

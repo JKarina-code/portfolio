@@ -1,4 +1,3 @@
-
 import PersonCanvas from "./Person"
-
-export { PersonCanvas };
+import BallCanvas from "./Ball";
+export { PersonCanvas, BallCanvas };

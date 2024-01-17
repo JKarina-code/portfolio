@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 import { styles } from "../styles";
 import { info } from "../constants";
 import { PersonCanvas } from "./canvas";
-export const Hero = () => {
+ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -28,7 +28,7 @@ export const Hero = () => {
               strings: [
                 "Front End Developer",
                 "Back End Developer",
-                " I love programming",
+                " I love programming .",
               ],
               autoStart: true,
               loop: true,
@@ -41,3 +41,4 @@ export const Hero = () => {
     </section>
   );
 };
+export default Hero;

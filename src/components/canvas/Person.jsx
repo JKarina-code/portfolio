@@ -9,7 +9,7 @@ const Person = () => {
       object={person.scene}
       scale={2.5}
       position-y={[-2]}
-      rotation-y={0}
+      
     />
   );
 };
@@ -36,6 +36,7 @@ const PersonCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          rotateSpeed={0.5}
         />
 
         <Person />
